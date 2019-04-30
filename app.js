@@ -50,7 +50,7 @@ app.post('/', function (req, res) {
       if(weather.main == undefined){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
-        let weatherText = `It's ${weather.weather[0].main} with ${weather.main.temp} degrees in ${weather.name}!`;
+        let weatherText = `Now, it seems ${weather.weather[0].main} with ${weather.main.temp} degrees in ${weather.name}.`;
         res.render('index', {weather: weatherText, error: null});
       }
     }
